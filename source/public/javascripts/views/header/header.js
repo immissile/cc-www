@@ -14,7 +14,8 @@
         return this.render();
       },
       events: {
-        'click .logo': 'goHome'
+        'click .logo': 'goHome',
+        'click .show-more': 'more'
       },
       render: function() {
         var html;
@@ -27,6 +28,17 @@
       },
       goHome: function() {
         return Backbone.history.navigate("/", true);
+      },
+      more: function(e) {
+        var $page, $this, MoreView, moreView, self;
+        $this = $(e.currentTarget);
+        self = this;
+        $page = $('.page');
+        $page.append('<div class="more-wrap"></div>');
+        MoreView = require('../page/more');
+        return moreView = new MoreView({
+          el: $('.more-wrap')
+        });
       }
     });
     return module.exports = ThisView;

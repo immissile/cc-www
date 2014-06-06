@@ -8,8 +8,6 @@
           <div class="title-border">
             <div></div>
           </div>
-          <p>我们是共产主义接班人，听毛主席话</p>
-          <p>我们伟大，我们光荣</p>
           <h3 data-view="about" class="more-detail">
             <span></span>
             <span>点击查阅详情</span>
@@ -22,8 +20,6 @@
           <div class="title-border">
             <div></div>
           </div>
-          <p>我们是共产主义接班人，听毛主席话</p>
-          <p>我们伟大，我们光荣</p>
           <h3 data-view="contact" class="more-detail">
             <span></span>
             <span>点击查阅详情</span>
@@ -36,8 +32,6 @@
           <div class="title-border">
             <div></div>
           </div>
-          <p>我们是共产主义接班人，听毛主席话</p>
-          <p>我们伟大，我们光荣</p>
           <h3 data-view="joinus" class="more-detail">
             <span></span>
             <span>点击查阅详情</span>

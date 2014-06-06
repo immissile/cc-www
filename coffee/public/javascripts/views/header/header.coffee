@@ -19,6 +19,7 @@ define (require, exports, module) ->
 
     events:
       'click .logo': 'goHome'
+      'click .show-more': 'more'
 
     render: ->
       console.log 'render header...'
@@ -30,5 +31,13 @@ define (require, exports, module) ->
       Backbone.history.navigate "/", true
       #ContainerView = require './container'
       #new ContainerView
+    
+    more: (e) ->
+      $this = $(e.currentTarget)
+      self = @
+      $page = $('.page')
+      $page.append('<div class="more-wrap"></div>')
+      MoreView = require '../page/more'
+      moreView = new MoreView el: $('.more-wrap')
 
   module.exports = ThisView

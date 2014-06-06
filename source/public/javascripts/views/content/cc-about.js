@@ -27,34 +27,25 @@
         timmer = null;
         return this.$el.find('td.ava').hover(function() {
           var $name, $title, h, margin, self, w, _content;
-          self = this;
-          w = $(this).width();
-          h = $(this).height();
-          $(this).removeClass('animated');
-          $(this).removeClass('flipInY');
-          $(this).removeClass('flipInX');
-          if ($(this).hasClass('fli-x')) {
-            $(this).addClass('animated flipInX');
-          } else {
-            $(this).addClass('animated flipInY');
-          }
-          $title = $(this).find('h3');
-          $name = $(this).find('p');
+          self = $(this);
+          w = self.width();
+          h = self.height();
+          self.removeClass('animated flipInY flipInX');
+          self.addClass('animated ' + (self.hasClass('fli-x') ? 'flipInX' : 'flipInY'));
+          $title = self.find('h3');
+          $name = self.find('p');
           _content = $title.height() + $name.height();
           _content = 70;
-          margin = ($(this).height() - _content) / 2;
+          margin = (self.height() - _content) / 2;
           $title.css({
             marginTop: margin
           });
-          return $(self).find('.ava-in').show();
+          return self.find('.ava-in').show();
         }, function() {
           var self;
-          self = this;
+          self = $(this);
           return timmer = setTimeout(function() {
-            $(self).removeClass('animated');
-            $(self).removeClass('flipInY');
-            $(self).removeClass('flipInX');
-            return $(self).find('.ava-in').fadeOut();
+            return self.removeClass('animated flipInX flipInY'.find('.ava-in').fadeOut());
           }, 200);
         });
       }

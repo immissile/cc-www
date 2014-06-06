@@ -2841,6 +2841,13 @@ header {
   width: auto;
   cursor: pointer;
 }
+.header .inner .bar-right {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 1.4em;
+  cursor: pointer;
+}
 .header a.header-logo {
   display: inline-block;
   height: 100%;
@@ -3290,8 +3297,8 @@ section .sub-page {
 }
 .detail-page .detail-content h2 {
   font-size: 2.0em;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   font-weight: normal;
 }
 .detail-page .detail-content p {
@@ -3502,6 +3509,16 @@ section .sub-page {
   color: #666;
   font-size: 13px;
 }
+.more-page .desc p {
+  width: 50%;
+  margin: auto;
+  line-height: 2;
+}
+.more-page .detail-content .contact-email {
+  font-size: 15px;
+  margin-top: 50px;
+  font-weight: bold;
+}
 .more-page .sub-title {
   margin-bottom: 20px;
 }
@@ -3560,6 +3577,9 @@ section .sub-page {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
   background-image: url(/images/arrow-right-grey.png);
+}
+.ie-icon {
+  display: none;
 }
 footer {
   position: fixed;

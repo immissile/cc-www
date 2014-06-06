@@ -12,6 +12,7 @@ define (require, exprots, module) ->
   tpl_a = require '../../../tpl/detail-customers-1.tpl'
   tpl_b = require '../../../tpl/detail-customers-2.tpl'
   tpl_c = require '../../../tpl/detail-customers-3.tpl'
+  tpl_d = require '../../../tpl/detail-customers-4.tpl'
 
   ThisView = Backbone.View.extend
 
@@ -54,6 +55,9 @@ define (require, exprots, module) ->
 
         when 'c'
         then _tpl = tpl_c
+
+        when 'd'
+        then _tpl = tpl_d
       $section.append _tpl
       $('.detail-page').addClass 'animated moveInRight'
 

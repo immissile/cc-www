@@ -12,4 +12,12 @@
     map: [[".js", ".js?" + new Date().getTime()]]
   });
 
+  if (!window.console) {
+    window.console = {
+      log: function(x) {
+        return x;
+      }
+    };
+  }
+
 }).call(this);

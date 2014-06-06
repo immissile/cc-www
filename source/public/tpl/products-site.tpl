@@ -1,12 +1,15 @@
 <div class="animate-text">
-  <h2>
-    CREDITMARKET<br>
-    线上债权销售平台
-  </h2>
-  <p>扩展P2P业务至线下</p>
-  <p>员工绩效、移动信审、外勤轨迹管理</p>
-  <p>实时回传信审数据、防止内部欺诈</p>
-  <p>快速开户、产品销售等附加功能</p>
-  <p>整合平板电脑、MINI9 POS及外设</p>
+  <h2 class="h2-tech">产品</h2>
+  <ul>
+    <li data-view="tech-a">
+      信贷交易市场
+    </li>
+    <li data-view="tech-b">
+      信贷管理中心
+    </li>
+    <li data-view="tech-c">
+      移动信审设备
+    </li>
+  </ul>
 </div>
 

@@ -11,3 +11,8 @@ seajs.config
   map: [
     [".js", ".js?" + new Date().getTime()]
   ]
+
+if !window.console
+  window.console =
+    log: (x)->
+      x

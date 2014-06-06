@@ -26,7 +26,7 @@
           for (_j = 0, _len = arr.length; _j < _len; _j++) {
             key = arr[_j];
             if (key < $wp.length - 1) {
-              $wp.get(key).remove();
+              $wp.eq(key).remove();
             }
           }
           if (callback) {
@@ -58,7 +58,7 @@
           for (_j = 0, _len = arr.length; _j < _len; _j++) {
             key = arr[_j];
             if (key < $body.length - 1) {
-              $body.get(key).remove();
+              $body.eq(key).remove();
             }
           }
           if (callback) {

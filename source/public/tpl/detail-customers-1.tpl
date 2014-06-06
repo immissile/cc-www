@@ -1,13 +1,16 @@
 <div class="detail-page">
   <button class="hide-detail"></button>
   <div class="detail-banner">
-    <img src="/images/detail-javaee.jpg">
+    <img src="/images/eastlending.jpg">
   </div>
   <div class="detail-content">
-    <h2>客户1</h2>
-    <p>广泛被银行、电信等关键领域使用</p>
-    <p>业务层使用EJB实现，全面支持分布式事物，提高业务逻辑稳定性</p>
-    <p>数据库及应用服务器均采用ORACLE提供的企业级产品</p>
+    <h2>东方资产</h2>
+    <p><a href="https://www.eastlending.com/">https://www.eastlending.com/</a></p>
+    <p>注资100 亿大型国有独资金融机构，目前总资产 2,300 亿元，服务网络覆盖全国</p>
+    <p>在国内设有 25 家办事处和 1 家经营部</p>
+    <p>在境内外拥有 10 余家控股公司，为 800 多万客户提供了服务。</p>
+    <p>云中信为东方资产的互联网金融平台提供整体业务咨询和技术合作</p>
+    <p>定制机构管理功能对接相关分公司，专业的权限管理和数据隔离手段保障了系统的可靠性</p>
   </div>
   <div class="space-100"></div>
 </div>

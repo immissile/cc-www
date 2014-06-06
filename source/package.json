@@ -1,19 +1,22 @@
 {
-    "name": "icheshang.com",
-    "description": "app for icheshang.com",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-        "start": "node app.js"
-    },
-    "dependencies": {
-        "express": "3.4.7",
-        "jade": "*",
-        "less": "~1.5.1",
-        "less-middleware": "*",
-        "underscore": "1.5.2",
-        "backbone": "1.1.0",
-        "jquery": "2.x",
-        "mustache": "0.8.0"
-    }
+  "name": "icheshang.com",
+  "description": "app for icheshang.com",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.7",
+    "jade": "*",
+    "less": "~1.5.1",
+    "less-middleware": "*",
+    "underscore": "1.5.2",
+    "backbone": "1.1.0",
+    "jquery": "2.x",
+    "mustache": "0.8.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-imagemin": "^0.7.0"
+  }
 }

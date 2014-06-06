@@ -17,7 +17,7 @@ define (require, exports, module) ->
       setTimeout ->
         for key in arr
           if key < $wp.length - 1
-            $wp.get(key).remove()
+            $wp.eq(key).remove()
         if callback
           callback()
       , time
@@ -36,7 +36,7 @@ define (require, exports, module) ->
       setTimeout ->
         for key in arr
           if key < $body.length - 1
-            $body.get(key).remove()
+            $body.eq(key).remove()
         if callback
           callback()
       , time

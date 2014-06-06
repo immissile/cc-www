@@ -1,6 +1,6 @@
 (function() {
   define(function(require, exprots, module) {
-    var $, Backbone, RES, ThisView, Util, common, tpl, tpl_a, tpl_b, tpl_c, _;
+    var $, Backbone, RES, ThisView, Util, common, tpl, tpl_a, tpl_b, tpl_c, tpl_d, _;
     $ = require('jquery');
     Backbone = require('backbone');
     _ = require('underscore');
@@ -11,6 +11,7 @@
     tpl_a = require('../../../tpl/detail-customers-1.tpl');
     tpl_b = require('../../../tpl/detail-customers-2.tpl');
     tpl_c = require('../../../tpl/detail-customers-3.tpl');
+    tpl_d = require('../../../tpl/detail-customers-4.tpl');
     ThisView = Backbone.View.extend({
       initialize: function() {
         this.common = common;
@@ -55,6 +56,9 @@
             break;
           case 'c':
             _tpl = tpl_c;
+            break;
+          case 'd':
+            _tpl = tpl_d;
         }
         $section.append(_tpl);
         $('.detail-page').addClass('animated moveInRight');
