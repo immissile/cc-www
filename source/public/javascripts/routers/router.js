@@ -50,7 +50,7 @@
         _results = [];
         for (key in this.res) {
           prefix = '?v=' + new Date().getTime();
-          url = self.res[key];
+          url = self.res['home'];
           _results.push(CC.funs.imgLoader(url, function(o) {
             counter++;
             if (counter === Util.countLength(self.res)) {

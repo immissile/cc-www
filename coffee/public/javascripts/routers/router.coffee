@@ -55,7 +55,8 @@ define (require, exports, module) ->
 
       for key of @res
         prefix = '?v=' + new Date().getTime()
-        url = self.res[key] #+ prefix
+        #url = self.res[key] #+ prefix
+        url = self.res['home'] #+ prefix
         CC.funs.imgLoader url, (o) ->
           counter++
           if counter == Util.countLength self.res
