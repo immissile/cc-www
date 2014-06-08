@@ -76,7 +76,6 @@ define (require, exprots, module) ->
         len = arr.length
         currentImg = 0
         window.bgTimmer = setInterval ->
-          console.log currentImg
           #self.$el.css 'background-image', arr[currentImg
           self.$el.attr 'style', "background-image: url(#{arr[currentImg]})"
           #self.$el.html arr[currentImg]

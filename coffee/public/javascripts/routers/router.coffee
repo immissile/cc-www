@@ -60,7 +60,6 @@ define (require, exports, module) ->
         CC.funs.imgLoader url, (o) ->
           counter++
           if counter == Util.countLength self.res
-            console.log 'res loaded'
             self.resLoaded = true
             # fadeout & remove landing wrapper
             $('.landing-status').addClass('fadeOutUp animated')
@@ -86,7 +85,7 @@ define (require, exports, module) ->
 
     #;q 各个page view
     page: (page)->
-      console.log 'page: ', page
+      #console.log 'page: ', page
       self = @
       @loadRes ->
         self.newWrapper()

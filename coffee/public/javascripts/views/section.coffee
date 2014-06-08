@@ -26,7 +26,6 @@ define (require, exports, module) ->
       this.$el.height $(window).height() - w
 
     render: ->
-      console.log 'render section...'
       @$el.css "background-image", "url(#{RES.home})"
       container = _.template tpl
       this.$el.html container

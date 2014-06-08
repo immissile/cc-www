@@ -49,7 +49,6 @@
           for (var _i = 0, _ref = $body.length; 0 <= _ref ? _i < _ref : _i > _ref; 0 <= _ref ? _i++ : _i--){ _results.push(_i); }
           return _results;
         }).apply(this);
-        console.log('arr.length', arr);
         if (arr.length <= 1) {
           return;
         }
@@ -71,7 +70,6 @@
         if ($container == null) {
           $container = $('.container-in');
         }
-        console.log('$container', $container);
         h_header = $('.s-header').height();
         h_subHeader = $('.sub-header').height();
         h_subFooter = $('.sub-footer').height();

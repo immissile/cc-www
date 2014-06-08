@@ -26,34 +26,40 @@ define (require, exprots, module) ->
 
     bindHover: ->
       timmer = null
-      @$el.find('td.ava').hover ->
-        self = $(@)
-        w = self.width()
-        h = self.height()
+      @$el.find('.team-in-list .ava-tar').hover ->
+        self = @
+        w = $(@).width()
+        h = $(@).height()
 
-        self.removeClass 'animated flipInY flipInX'
+        $ava = $(@).find('.ava')
+        $ava.removeClass 'animated'
+        $ava.removeClass 'flipInY'
+        $ava.removeClass 'flipInX'
+        $ava.removeClass 'flipInYrev'
 
-        self.addClass 'animated ' + (if self.hasClass 'fli-x' then 'flipInX' else 'flipInY')
+        if $ava.hasClass 'fli-x'
+          $ava.addClass 'animated flipInX'
+        else
+          $ava.addClass 'animated flipInY'
 
-        $title = self.find('h3')
-        $name  = self.find('p')
+        $title = $(@).find('h3')
+        $name = $(@).find('p')
         _content = $title.height() + $name.height()
         _content = 70
-        margin = (self.height() - _content) / 2
+        margin = ($(@).find('div:first').height() - _content) / 2
         $title.css marginTop: margin
 
-        # set ava-in position
-        #$(self).find('.ava-in').css
-        #  width: w
-        #  height: h
-
-        self.find('.ava-in').show()
+        setTimeout ->
+          $(self).find('.ava-in').fadeIn()
+        , 80
       , ->
-        self = $(@)
+        self = @
+        $ava = $(self).find '.ava'
+        $(self).find('.ava-in').fadeOut()
         timmer = setTimeout ->
-          self.removeClass 'animated flipInX flipInY'
-              .find('.ava-in')
-              .fadeOut()
-        , 200
+          $ava.removeClass 'animated'
+          $ava.removeClass 'flipInY'
+          $ava.removeClass 'flipInX'
+        , 250
 
   module.exports = ThisView

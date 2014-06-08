@@ -72,9 +72,7 @@
           el: $('.sub-body:last')
         });
       },
-      switchView: function(view) {
-        return console.lgo(1);
-      },
+      switchView: function(view) {},
       addAnimate: function() {
         var $containerIn;
         $containerIn = $('.sub-section .container-in');

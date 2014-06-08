@@ -19,7 +19,6 @@
       },
       render: function() {
         var html;
-        console.log('render header...');
         html = _.template(tpl, {
           logo: RES.landing
         });

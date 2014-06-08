@@ -63,8 +63,7 @@ define (require, exports, module) ->
       $('.sub-page').height $(window).height() - h_h - h_s
 
       #set container-in
-      console.log '~~~~', $('.sub-footer').height()
-      $('.container-in').height($('.sub-page').height() - 70)
+      $('.container-in').height($('.sub-page').height())
 
     renderCreditcloud: ->
       self = @

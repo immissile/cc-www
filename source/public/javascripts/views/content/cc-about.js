@@ -25,28 +25,42 @@
       bindHover: function() {
         var timmer;
         timmer = null;
-        return this.$el.find('td.ava').hover(function() {
-          var $name, $title, h, margin, self, w, _content;
-          self = $(this);
-          w = self.width();
-          h = self.height();
-          self.removeClass('animated flipInY flipInX');
-          self.addClass('animated ' + (self.hasClass('fli-x') ? 'flipInX' : 'flipInY'));
-          $title = self.find('h3');
-          $name = self.find('p');
+        return this.$el.find('.team-in-list .ava-tar').hover(function() {
+          var $ava, $name, $title, h, margin, self, w, _content;
+          self = this;
+          w = $(this).width();
+          h = $(this).height();
+          $ava = $(this).find('.ava');
+          $ava.removeClass('animated');
+          $ava.removeClass('flipInY');
+          $ava.removeClass('flipInX');
+          $ava.removeClass('flipInYrev');
+          if ($ava.hasClass('fli-x')) {
+            $ava.addClass('animated flipInX');
+          } else {
+            $ava.addClass('animated flipInY');
+          }
+          $title = $(this).find('h3');
+          $name = $(this).find('p');
           _content = $title.height() + $name.height();
           _content = 70;
-          margin = (self.height() - _content) / 2;
+          margin = ($(this).find('div:first').height() - _content) / 2;
           $title.css({
             marginTop: margin
           });
-          return self.find('.ava-in').show();
+          return setTimeout(function() {
+            return $(self).find('.ava-in').fadeIn();
+          }, 80);
         }, function() {
-          var self;
-          self = $(this);
+          var $ava, self;
+          self = this;
+          $ava = $(self).find('.ava');
+          $(self).find('.ava-in').fadeOut();
           return timmer = setTimeout(function() {
-            return self.removeClass('animated flipInX flipInY'.find('.ava-in').fadeOut());
-          }, 200);
+            $ava.removeClass('animated');
+            $ava.removeClass('flipInY');
+            return $ava.removeClass('flipInX');
+          }, 250);
         });
       }
     });

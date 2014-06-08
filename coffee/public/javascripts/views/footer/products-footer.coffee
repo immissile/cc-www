@@ -63,7 +63,7 @@ define (require, exports, module) ->
       conView = new ConView el: $('.sub-body:last')
 
     switchView: (view) ->
-      console.lgo 1
+      #console.lgo 1
       
 
     addAnimate: ->

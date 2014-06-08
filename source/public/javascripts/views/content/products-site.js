@@ -73,7 +73,6 @@
           len = arr.length;
           currentImg = 0;
           return window.bgTimmer = setInterval(function() {
-            console.log(currentImg);
             self.$el.attr('style', "background-image: url(" + arr[currentImg] + ")");
             if (currentImg + 1 === len) {
               return currentImg = 0;

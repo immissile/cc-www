@@ -9,7 +9,7 @@
   <!--
   <img src="<%= logo %>" class="logo">
   --!>
-  <img src='data:img/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAAlAAAAB9CAYAAABtT12EAAAvvElEQVR42u2dC1gU5f7Hz6GDKF7K
+  <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAlAAAAB9CAYAAABtT12EAAAvvElEQVR42u2dC1gU5f7Hz6GDKF7K
   Mi6alzIVEaTQ6pgKKN6y+ptkpWmmoYgUYR3LLE9ldrXseMwyzTzeL5jm5SjmBVjAW4YiipaSiuD9
   LqJc9Lz/+c7uwDTtDrPLQmt8fZ7Ps+uy887Mu7P7fub3/t73/YsQ4i+EEEIIIcQ4rARCCCGEEAoU
   IYQQQggFihBCCCGEAkUIIYQQQoEihBAnceNyvueJ71YPPbV0dWRh/mVP1gkhhAJFCCG2xKmo2O1c
@@ -224,5 +224,5 @@
   KEJI9eTMhYIG42Ysn9mgd5zw7DJCXqD4d/IkiZNn2Ajh9UiseHvG8ulnLhU0YN0RQihQhJBqz96c
   40HPvDV1e71uMfLIPESbbgkxJ4zf2m2E6P/ml9uzDh8LKrlexLXqCCEUKEIIUSgqLnFbnbZ7QLsh
   7xbU7R4j6oWPFO1feKdg9eZdA/A31hEhhAJFCCE2yC8o9Fz4w9boheu3ReM564QQQoEihBBCCPkT
-  8P9PsQWiYg4VjgAAAABJRU5ErkJggg=='class="logo">
+  8P9PsQWiYg4VjgAAAABJRU5ErkJggg==" class="logo" />
 </div>

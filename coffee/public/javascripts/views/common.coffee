@@ -30,7 +30,6 @@ define (require, exports, module) ->
 
       $body = $('.container-in .sub-body')
       arr = [0...$body.length]
-      console.log 'arr.length', arr
       if arr.length <= 1
         return
       setTimeout ->
@@ -42,7 +41,6 @@ define (require, exports, module) ->
       , time
     
     resetContainer: ($container=$('.container-in'))->
-      console.log '$container', $container
       h_header = $('.s-header').height()
       h_subHeader = $('.sub-header').height()
       h_subFooter = $('.sub-footer').height()

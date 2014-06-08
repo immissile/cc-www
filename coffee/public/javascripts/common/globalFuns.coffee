@@ -2,7 +2,6 @@ define (resource, exports, module) ->
   
   Funs =
     imgLoader: (url, callback) ->
-      #console.log 'loading', url
       img = new Image()
       img.onload = ->
         img.onload = img.onerror = null

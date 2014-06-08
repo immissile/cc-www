@@ -3145,71 +3145,8 @@ section .sub-page {
   margin-left: 300px;
   height: 100%;
 }
-.team-wrap table {
-  width: 100%;
-  height: 100%;
-}
-.team-wrap table tr td {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-}
-.team-wrap table tr td.ava-1 {
-  background-image: url(/images/team/1.png);
-}
-.team-wrap table tr td.ava-2 {
-  background-image: url(/images/team/2.png);
-}
-.team-wrap table tr td.ava-3 {
-  background-image: url(/images/team/3.png);
-}
-.team-wrap table tr td.ava-4 {
-  background-image: url(/images/team/4.png);
-}
-.team-wrap table tr td.ava-5 {
-  background-image: url(/images/team/5.png);
-}
-.team-wrap table tr td.ava-6 {
-  background-image: url(/images/team/6.png);
-}
-.team-wrap table tr td.ava-7 {
-  background-image: url(/images/team/7.png);
-}
-.team-wrap table td .ava-in {
-  position: absolute;
-  z-index: 25;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
-  background: #e0d0ac;
-  text-align: center;
-  display: none;
-}
-.team-wrap table td .ava-in h3 {
-  font-size: 1.8em;
-  font-weight: normal;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 10px;
-}
-.team-wrap table td .ava-in p {
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-}
-.team-wrap table [class*=" ava-"],
-.team-wrap table [class^=ava-] {
-  cursor: pointer;
-}
-.team-wrap .bg-grey {
-  background-color: #d1d1d1;
-}
 .team-wrap .team-top {
+  width: 100%;
   height: 50%;
 }
 .team-wrap .team-top .pull-left,
@@ -3221,6 +3158,7 @@ section .sub-page {
   width: 50%;
 }
 .team-wrap .team-bottom {
+  width: 100%;
   height: 50%;
 }
 .team-wrap .team-bottom .pull-left,
@@ -3232,6 +3170,115 @@ section .sub-page {
 }
 .team-wrap .team-bottom .pull-right {
   width: 25%;
+}
+.team-wrap .ava-tar {
+  width: 100%;
+  height: 100%;
+}
+.team-wrap .team-in-list {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  float: left;
+  background-color: #f7f7f7;
+}
+.team-wrap .team-in-list .team-in-t {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  float: left;
+  clear: both;
+}
+.team-wrap .team-in-list .team-in-b {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  float: left;
+  clear: both;
+}
+.team-wrap .team-ava-wp {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.team-wrap .ava {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.team-wrap .ava.ava-1 {
+  background-image: url(/images/team/1.png);
+}
+.team-wrap .ava.ava-2 {
+  background-image: url(/images/team/2.png);
+}
+.team-wrap .ava.ava-3 {
+  background-image: url(/images/team/3.png);
+}
+.team-wrap .ava.ava-4 {
+  background-image: url(/images/team/4.png);
+}
+.team-wrap .ava.ava-5 {
+  background-image: url(/images/team/5.png);
+}
+.team-wrap .ava.ava-6 {
+  background-image: url(/images/team/6.png);
+}
+.team-wrap .ava.ava-7 {
+  background-image: url(/images/team/7.png);
+}
+.team-wrap .ava.ava-8 {
+  background-image: url(/images/team/2.png);
+}
+.team-wrap .ava.ava-9 {
+  background-image: url(/images/team/6.png);
+}
+.team-wrap .ava.ava-10 {
+  background-image: url(/images/team/1.png);
+}
+.team-wrap .ava-in {
+  position: absolute;
+  z-index: 90;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background: #e0d0ac;
+  text-align: center;
+  display: none;
+  margin-top: 0;
+  float: left;
+}
+.team-wrap .ava-in h3 {
+  font-size: 1.8em;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.team-wrap .ava-in p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.team-wrap [class*=" ava-"],
+.team-wrap [class^=ava-] {
+  cursor: pointer;
+}
+.team-wrap .bg-grey {
+  background-color: #d1d1d1;
 }
 .focus-bg-1,
 .tech-bg-1,
@@ -3656,4 +3703,130 @@ footer ul li {
 }
 .sub-footer ul.has-double-li li {
   width: 50%;
+}
+@media (max-width: 600px) {
+  /*
+  body {
+    overflow: visible;
+    height: auto!important;
+  }
+  .wrapper {
+    overflow: visible;
+    height: auto!important;
+  }
+
+  .sub-section {
+    .container {
+      overflow: auto!important;
+      height: auto!important;
+    }
+  }
+  */
+  .header .bar-right {
+    display: none;
+  }
+  .s-header {
+    background-image: url(/images/logo-mobile.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 28%;
+  }
+  .s-header .inner {
+    text-align: left;
+  }
+  .s-header .inner .logo {
+    display: none;
+  }
+  .s-header .inner .bar-right {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    border-radius: 40px;
+    background-color: #eee;
+    background-image: url(/images/menu.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .s-header .inner .bar-right span {
+    display: none;
+  }
+  .bar-left.go-back {
+    width: 150px!important;
+    background: transparent;
+    left: 0!important;
+    top: 0;
+    height: 100%!important;
+  }
+  .bar-left.go-back span {
+    display: none!important;
+  }
+  .footer ul li span {
+    display: none;
+  }
+  .footer ul li h3 {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .sub-footer ul li {
+    padding: 15px 0;
+  }
+  .sub-footer ul li h3 {
+    margin: 0;
+  }
+  .sub-header .inner {
+    height: 43px;
+  }
+  .sub-header ul li span {
+    display: none;
+  }
+  .sub-header ul li h3 {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .more-wrap .more-content {
+    height: 230px;
+  }
+  .more-wrap .more-content .more-list {
+    padding-top: 70px;
+  }
+  .more-wrap .more-content .more-list h2 {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .more-wrap .more-content .more-list .title-border div {
+    display: none;
+  }
+  .more-wrap .more-content .more-list h3 {
+    color: #777;
+  }
+  .more-wrap .more-content .more-list h3 span:first-child {
+    margin-bottom: 10px;
+  }
+  section .sub-page {
+    margin-top: 45px;
+  }
+  .detail-page .detail-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .team-wrap .team-top {
+    height: auto;
+    float: left;
+    overflow: hidden;
+  }
+  .team-wrap .team-in-list {
+    float: left;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .team-wrap .ava {
+    height: 200px;
+  }
+  .team-dec {
+    display: none;
+  }
+  .team-wrap {
+    margin-left: 0;
+  }
 }

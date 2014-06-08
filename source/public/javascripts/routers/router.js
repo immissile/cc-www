@@ -54,7 +54,6 @@
           _results.push(CC.funs.imgLoader(url, function(o) {
             counter++;
             if (counter === Util.countLength(self.res)) {
-              console.log('res loaded');
               self.resLoaded = true;
               $('.landing-status').addClass('fadeOutUp animated');
               return setTimeout(function() {
@@ -86,7 +85,6 @@
       },
       page: function(page) {
         var self;
-        console.log('page: ', page);
         self = this;
         return this.loadRes(function() {
           var PageView;

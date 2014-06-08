@@ -22,7 +22,6 @@ define (require, exports, module) ->
       'click .show-more': 'more'
 
     render: ->
-      console.log 'render header...'
       html = _.template tpl, {logo: RES.landing}
       @$el.html html
       @
