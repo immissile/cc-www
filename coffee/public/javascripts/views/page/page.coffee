@@ -56,14 +56,27 @@ define (require, exports, module) ->
         @$el.css({top:0}).addClass ANIMATION
 
       @common.removeWrapper()
+      @resetDom()
 
-      # set container
-      h_h = $('.s-header').height()
-      h_s = $('.sub-header').height()
-      $('.sub-page').height $(window).height() - h_h - h_s
+      $(window).resize ->
+        self.resetDom()
 
-      #set container-in
-      $('.container-in').height($('.sub-page').height())
+  
+    resetDom: ->
+        # set container
+        h_h = $('.s-header').height()
+        h_s = $('.sub-header').height()
+        $('.sub-page').height $(window).height() - h_h - h_s
+
+        h_sub_footer = $(".sub-footer").height()
+        console.log "h_sub_footer--> ", h_sub_footer
+
+        #set container-in
+        if $(window).width() < 700
+          $('.container-in').height($('.sub-page').height())
+        else
+          $('.container-in').height($('.sub-page').height() - 84)
+        
 
     renderCreditcloud: ->
       self = @

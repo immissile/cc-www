@@ -14,7 +14,7 @@
         <div class="team-ava-wp ava ava-1"></div>
         <div class="ava-in">
           <h3>后端工程师</h3>
-          <p>浩哥</p>
+          <p>陈浩</p>
         </div>
       </div>
       <div class="team-in-b"></div>
@@ -25,7 +25,7 @@
         <div class="team-ava-wp ava ava-2"></div>
         <div class="ava-in">
           <h3>前端工程师</h3>
-          <p>凯文</p>
+          <p>刘伟博</p>
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@
     <div class="team-in-list team-list-a">
       <div class="team-in-t"></div>
       <div class="team-in-b ava-tar">
-        <div class="team-ava-wp ava ava-2"></div>
+        <div class="team-ava-wp ava ava-6"></div>
         <div class="ava-in">
           <h3>前端工程师</h3>
           <p>王宇</p>
@@ -63,14 +63,14 @@
     </div>
     <div class="team-in-list team-list-a">
       <div class="team-in-t ava-tar">
-        <div class="team-ava-wp ava ava-4"></div>
+        <div class="team-ava-wp ava ava-7"></div>
         <div class="ava-in">
           <h3>行政</h3>
-          <p>韩总</p>
+          <p>韩海蝶</p>
         </div>
       </div>
       <div class="team-in-b ava-tar">
-        <div class="team-ava-wp ava ava-6"></div>
+        <div class="team-ava-wp ava ava-8"></div>
         <div class="ava-in">
           <h3>DevOps</h3>
           <p>严炜</p>
@@ -80,10 +80,10 @@
     <div class="team-in-list team-list-a">
       <div class="team-in-t"></div>
       <div class="team-in-b ava-tar">
-        <div class="team-ava-wp ava ava-2"></div>
+        <div class="team-ava-wp ava ava-9"></div>
         <div class="ava-in">
           <h3>市场</h3>
-          <p>周董</p>
+          <p>周开印</p>
         </div>
       </div>
     </div>
@@ -92,7 +92,7 @@
         <div class="team-ava-wp ava ava-5"></div>
         <div class="ava-in">
           <h3>移动开发</h3>
-          <p>马总</p>
+          <p>马雪明</p>
         </div>
       </div>
     </div>

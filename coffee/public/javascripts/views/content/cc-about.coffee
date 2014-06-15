@@ -32,15 +32,15 @@ define (require, exprots, module) ->
         h = $(@).height()
 
         $ava = $(@).find('.ava')
-        $ava.removeClass 'animated'
+        $ava.removeClass 'animated-'
         $ava.removeClass 'flipInY'
         $ava.removeClass 'flipInX'
         $ava.removeClass 'flipInYrev'
 
         if $ava.hasClass 'fli-x'
-          $ava.addClass 'animated flipInX'
+          $ava.addClass 'animated- flipInX'
         else
-          $ava.addClass 'animated flipInY'
+          $ava.addClass 'animated- flipInY'
 
         $title = $(@).find('h3')
         $name = $(@).find('p')
@@ -51,7 +51,7 @@ define (require, exprots, module) ->
 
         setTimeout ->
           $(self).find('.ava-in').fadeIn()
-        , 80
+        , 0 #80
       , ->
         self = @
         $ava = $(self).find '.ava'
@@ -60,6 +60,6 @@ define (require, exprots, module) ->
           $ava.removeClass 'animated'
           $ava.removeClass 'flipInY'
           $ava.removeClass 'flipInX'
-        , 250
+        , 20 #250
 
   module.exports = ThisView

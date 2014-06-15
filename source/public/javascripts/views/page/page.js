@@ -20,7 +20,7 @@
         return this.render();
       },
       render: function() {
-        var $wrapper, ANIMATION, HeaderView, SubHeaderView, h_h, h_s, headerView, self, subHeaderView;
+        var $wrapper, ANIMATION, HeaderView, SubHeaderView, headerView, self, subHeaderView;
         self = this;
         $wrapper = $('.wrapper');
         this.$el.html(tpl);
@@ -57,10 +57,23 @@
           }).addClass(ANIMATION);
         }
         this.common.removeWrapper();
+        this.resetDom();
+        return $(window).resize(function() {
+          return self.resetDom();
+        });
+      },
+      resetDom: function() {
+        var h_h, h_s, h_sub_footer;
         h_h = $('.s-header').height();
         h_s = $('.sub-header').height();
         $('.sub-page').height($(window).height() - h_h - h_s);
-        return $('.container-in').height($('.sub-page').height());
+        h_sub_footer = $(".sub-footer").height();
+        console.log("h_sub_footer--> ", h_sub_footer);
+        if ($(window).width() < 700) {
+          return $('.container-in').height($('.sub-page').height());
+        } else {
+          return $('.container-in').height($('.sub-page').height() - 84);
+        }
       },
       renderCreditcloud: function() {
         var ContainerView, containerView, self;

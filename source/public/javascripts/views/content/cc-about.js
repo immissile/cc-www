@@ -31,14 +31,14 @@
           w = $(this).width();
           h = $(this).height();
           $ava = $(this).find('.ava');
-          $ava.removeClass('animated');
+          $ava.removeClass('animated-');
           $ava.removeClass('flipInY');
           $ava.removeClass('flipInX');
           $ava.removeClass('flipInYrev');
           if ($ava.hasClass('fli-x')) {
-            $ava.addClass('animated flipInX');
+            $ava.addClass('animated- flipInX');
           } else {
-            $ava.addClass('animated flipInY');
+            $ava.addClass('animated- flipInY');
           }
           $title = $(this).find('h3');
           $name = $(this).find('p');
@@ -50,7 +50,7 @@
           });
           return setTimeout(function() {
             return $(self).find('.ava-in').fadeIn();
-          }, 80);
+          }, 0);
         }, function() {
           var $ava, self;
           self = this;
@@ -60,7 +60,7 @@
             $ava.removeClass('animated');
             $ava.removeClass('flipInY');
             return $ava.removeClass('flipInX');
-          }, 250);
+          }, 20);
         });
       }
     });
