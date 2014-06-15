@@ -25,7 +25,6 @@
       },
       render: function() {
         var container;
-        this.$el.css("background-image", "url(" + RES.home + ")");
         container = _.template(tpl);
         return this.$el.html(container);
       }

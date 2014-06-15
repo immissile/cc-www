@@ -1,7 +1,8 @@
 <div class="detail-page more-page">
   <button class="hide-detail"></button>
   <div class="detail-banner">
-    <img src="/images/banners/joinus.jpg">
+    <!--/images/banners/joinus.jpg-->
+    <img src="http://creditmanager.b0.upaiyun.com/42db5b5a98e4ac65290ed9d38ad5f8f1">
   </div>
   <div class="detail-content">
     <h2 class="main-title">招贤纳士</h2>

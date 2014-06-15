@@ -1,7 +1,8 @@
 <div class="detail-page">
   <button class="hide-detail"></button>
   <div class="detail-banner">
-    <img src="/images/detail-safety.jpg">
+    <!--images/detail-safety.jpg-->
+    <img src="http://creditmanager.b0.upaiyun.com/49886814739df0dfadd8982c50afb9f0">
   </div>
   <div class="detail-content">
     <h2>金融级安全架构</h2>

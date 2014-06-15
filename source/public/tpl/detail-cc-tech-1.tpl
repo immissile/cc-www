@@ -1,7 +1,8 @@
 <div class="detail-page">
   <button class="hide-detail"></button>
   <div class="detail-banner">
-    <img src="/images/detail-javaee.jpg">
+    <!--/images/detail-javaee.jpg-->
+    <img src="http://creditmanager.b0.upaiyun.com/59fef93a7be520f1f0a1097fdb8dabb9">
   </div>
   <div class="detail-content">
     <h2>全面使用企业级JAVAEE技术开发</h2>

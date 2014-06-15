@@ -1,7 +1,8 @@
 <div class="detail-page more-page">
   <button class="hide-detail"></button>
   <div class="detail-banner">
-    <img src="/images/banners/contact.jpg">
+    <!--/images/banners/contact.jpg-->
+    <img src="http://creditmanager.b0.upaiyun.com/29af290f97dc02473d5c77e92fbc2778">
   </div>
   <div class="detail-content">
     <h2 class="main-title">联系我们</h2>
@@ -13,7 +14,11 @@
       <div>地理位置</div>
     </div>
 
-    <p><img src="/images/map.png" class="map"></p>
+    <p>
+      <a href="http://creditmanager.b0.upaiyun.com/ee70c7d01adef91c4183a09347422d0f" target="_blank">
+        <img src="http://creditmanager.b0.upaiyun.com/ee70c7d01adef91c4183a09347422d0f" class="map">
+      </a>
+    </p>
   </div>
   <div class="space-100"></div>
 </div>

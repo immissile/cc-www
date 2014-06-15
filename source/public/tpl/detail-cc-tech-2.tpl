@@ -1,7 +1,8 @@
 <div class="detail-page">
   <button class="hide-detail"></button>
   <div class="detail-banner">
-    <img src="/images/detail-html5.jpg">
+    <!--images/detail-html5.jpg-->
+    <img src="http://creditmanager.b0.upaiyun.com/0828f5874f3931389debd9b1b0e5b581">
   </div>
   <div class="detail-content">
     <h2>HTML5前端页面技术</h2>

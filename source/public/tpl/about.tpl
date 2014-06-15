@@ -1,7 +1,8 @@
 <div class="detail-page more-page">
   <button class="hide-detail"></button>
   <div class="detail-banner">
-    <img src="/images/banners/about.jpg">
+    <!--images/banners/about.jpg-->
+    <img src="http://creditmanager.b0.upaiyun.com/e58ecb23d680461636d77aac036f3209">
   </div>
   <div class="detail-content">
     <h2 class="main-title">关于我们</h2>

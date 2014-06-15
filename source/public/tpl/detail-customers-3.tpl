@@ -1,7 +1,8 @@
 <div class="detail-page">
   <button class="hide-detail"></button>
   <div class="detail-banner">
-    <img src="/images/anrunjinrong.jpg">
+    <!--images/anrunjinrong.jpg-->
+    <img src="http://creditmanager.b0.upaiyun.com/3ccc32a0b0edfe897036551e88e17ae1">
   </div>
   <div class="detail-content">
     <h2>安华农业保险</h2>

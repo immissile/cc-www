@@ -1,7 +1,8 @@
 <div class="detail-page">
   <button class="hide-detail"></button>
   <div class="detail-banner">
-    <img src="/images/eastlending.jpg">
+    <!--/images/eastlending.jpg-->
+    <img src="http://creditmanager.b0.upaiyun.com/db6ffe707220a142e5cb8702ccf17286">
   </div>
   <div class="detail-content">
     <h2>东方资产</h2>
