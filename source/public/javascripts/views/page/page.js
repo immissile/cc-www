@@ -68,7 +68,6 @@
         h_s = $('.sub-header').height();
         $('.sub-page').height($(window).height() - h_h - h_s);
         h_sub_footer = $(".sub-footer").height();
-        console.log("h_sub_footer--> ", h_sub_footer);
         if ($(window).width() < 700) {
           return $('.container-in').height($('.sub-page').height());
         } else {

@@ -5,7 +5,7 @@
   </div>
   <div class="detail-content">
     <h2>东方资产</h2>
-    <p><a href="https://www.eastlending.com/">https://www.eastlending.com/</a></p>
+    <p><a href="https://www.eastlending.com/" target="_blank">https://www.eastlending.com/</a></p>
     <p>注资100 亿大型国有独资金融机构，目前总资产 2,300 亿元，服务网络覆盖全国</p>
     <p>在国内设有 25 家办事处和 1 家经营部</p>
     <p>在境内外拥有 10 余家控股公司，为 800 多万客户提供了服务。</p>

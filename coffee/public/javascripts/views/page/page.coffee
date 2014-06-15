@@ -69,7 +69,6 @@ define (require, exports, module) ->
         $('.sub-page').height $(window).height() - h_h - h_s
 
         h_sub_footer = $(".sub-footer").height()
-        console.log "h_sub_footer--> ", h_sub_footer
 
         #set container-in
         if $(window).width() < 700
