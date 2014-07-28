@@ -40,4 +40,5 @@
       </td>
     </tr>
   </table>
+  <p class="icp-info">&copy; 2013-2014 云信贷版权所有 &nbsp;&nbsp;苏ICP备13032969号-1</p>
 </div>

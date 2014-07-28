@@ -3543,6 +3543,13 @@ section .sub-page {
   transition-duration: 0.3s;
   background-image: url(/images/arrow-right-grey.png);
 }
+.more-wrap .more-content p.icp-info {
+  color: #7C7C7C;
+  text-align: center;
+  margin: 50px 50px;
+  border-top: 1px solid #eee;
+  padding-top: 35px;
+}
 .more-page h2.main-title {
   margin-top: 60px;
   margin-bottom: 30px;
