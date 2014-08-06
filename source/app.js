@@ -23,7 +23,7 @@ App Interface
 
   app.configure("development", function() {
     app.use(express.errorHandler());
-    return app.locals.pretty = true;
+    return app.locals.pretty = false;
   });
 
   app.use(express.favicon());
@@ -42,7 +42,7 @@ App Interface
     src: path.join(__dirname, "public/less"),
     dest: path.join(__dirname, "public/stylesheets"),
     prefix: '/stylesheets',
-    compress: false
+    compress: true
   }));
 
   app.use(express["static"](path.join(__dirname, "public")));

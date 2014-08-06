@@ -17,7 +17,9 @@ app.set "view engine", "jade"
 # compress html or not
 app.configure "development", ->
   app.use express.errorHandler()
-  app.locals.pretty = true
+  # 压缩html
+  #app.locals.pretty = true
+  app.locals.pretty = false
 
 app.use express.favicon()
 app.use express.logger("dev")
@@ -30,7 +32,9 @@ app.use(
     src: path.join(__dirname, "public/less")
     dest: path.join(__dirname, "public/stylesheets")
     prefix: '/stylesheets'
-    compress: false
+    # 压缩css
+    #compress: false
+    compress: true
   )
 )
 app.use express.static(path.join(__dirname, "public"))
