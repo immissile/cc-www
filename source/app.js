@@ -5,7 +5,7 @@ App Interface
 
 
 (function() {
-  var app, detail, express, http, path, routes;
+  var app, detail, express, http, joinUs, path, routes;
 
   express = require("express");
 
@@ -55,9 +55,13 @@ App Interface
 
   detail = require("./routes/detail");
 
+  joinUs = require("./routes/joinUs");
+
   app.get("/", routes.index);
 
   app.get(/^\/page-*?(?:\/(\d+)(?:\.\.(\d+))?)?/, routes.index);
+
+  app.get("/joinUs.html", joinUs.index);
 
   http.createServer(app).listen(app.get("port"), function() {
     return console.log("Express server listening on port " + app.get("port"));

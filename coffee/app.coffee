@@ -41,6 +41,7 @@ app.use express.errorHandler()  if "development" is app.get("env")
 
 routes = require("./routes")
 detail = require("./routes/detail")
+joinUs = require("./routes/joinUs")
 
 # 首页
 app.get "/", routes.index
@@ -49,6 +50,9 @@ app.get /^\/page-*?(?:\/(\d+)(?:\.\.(\d+))?)?/, routes.index
 
 # detail 
 #app.get "/detail*?", detail.list
+
+#joinUs
+app.get "/joinUs.html", joinUs.index
 
 http.createServer(app).listen app.get("port"), ->
   console.log "Express server listening on port " + app.get("port")
