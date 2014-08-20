@@ -26,7 +26,7 @@ App Interface
     return app.locals.pretty = false;
   });
 
-  app.use(express.favicon());
+  app.use(express.favicon(path.join(__dirname, 'public/images/favicon.ico')));
 
   app.use(express.logger("dev"));
 

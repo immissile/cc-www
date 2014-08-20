@@ -44,13 +44,36 @@ a.logo {
   margin-left: auto;
   margin-right: auto;
   max-width: 740px;
+
+  ul li {
+    line-height: 30px;
+  }
+
+  p {
+    text-indent: 2em;
+  }
+
+  .main-dec {
+    padding-top: 20px;
+    p {
+      line-height: 28px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    ul li {
+      list-style-type: disc;
+      margin-left: 20px;
+      padding-left: 0;
+    }
+  }
 }
 .content {
   padding: 20px;
   background-color: #fff;
   border: 1px solid #d9dadc;
   border-top-width: 0;
-  
+
   h2 {
     font-size: 16px;
     padding: 15px 0;
@@ -60,6 +83,31 @@ a.logo {
       color: #333;
       text-align: center;
     }
+  }
+  h2.h-s {
+    margin-top: 5px;
+    padding: 5px 0 0;
+    font-weight: normal;
+    font-style: italic;
+    color: #000;
+  }
+
+  .action {
+    margin: 0 auto;
+    margin: 20px auto;
+    padding: 20px 30px;
+    max-width: 500px;
+    border: 1px dashed #eee;
+    p {
+      text-align: center;
+      &:first-child {
+        padding-bottom: 15px;
+      }
+    }
+  }
+  h2.h-act {
+    font-size: 14px;
+    color: #333;
   }
 
   ul li {
