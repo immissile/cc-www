@@ -5,7 +5,7 @@ App Interface
 
 
 (function() {
-  var app, detail, express, http, joinUs, path, routes;
+  var Cooperation, access, admin, app, cooperation, detail, express, http, joinUs, mongoose, path, routes;
 
   express = require("express");
 
@@ -13,13 +13,27 @@ App Interface
 
   path = require("path");
 
+  mongoose = require("mongoose");
+
+  Cooperation = require("./models/cooperation");
+
   app = express();
+
+  mongoose.connect('mongodb://127.0.0.1:27017/imooc');
+
+  access = require("./access");
 
   app.set("port", process.env.PORT || 3000);
 
   app.set("views", path.join(__dirname, "views"));
 
   app.set("view engine", "jade");
+
+  app.use(express.bodyParser());
+
+  app.use(express.cookieParser('Authentication Tutorial '));
+
+  app.use(express.session());
 
   app.configure("development", function() {
     app.use(express.errorHandler());
@@ -35,6 +49,17 @@ App Interface
   app.use(express.urlencoded());
 
   app.use(express.methodOverride());
+
+  app.use(function(req, res, next) {
+    var err, msg;
+    err = req.session.error;
+    msg = req.session.success;
+    delete req.session.error;
+    delete req.session.success;
+    res.locals.user = req.session.user;
+    res.locals.error = err;
+    return next();
+  });
 
   app.use(app.router);
 
@@ -57,9 +82,31 @@ App Interface
 
   joinUs = require("./routes/joinUs");
 
+  cooperation = require("./routes/cooperation");
+
+  admin = require("./routes/admin");
+
   app.get("/", routes.index);
 
   app.get(/^\/page-*?(?:\/(\d+)(?:\.\.(\d+))?)?/, routes.index);
+
+  app.get("/cooperation", cooperation.index);
+
+  app.post("/cooperation/new", cooperation["new"]);
+
+  app.get("/cooperation/succ", cooperation.succ);
+
+  app.get("/admin", access.requiredAuthentication, admin.index);
+
+  app.get("/admin/login", admin.login);
+
+  app.post("/admin/login", admin.postLogin);
+
+  app.get("/admin/logout", admin.logout);
+
+  app.get("/admin/setup", admin.setup);
+
+  app.post("/admin/setup", access.userExist, admin.postSetup);
 
   app.get("/joinUs.html", joinUs.index);
 

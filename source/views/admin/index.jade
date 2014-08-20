@@ -1,0 +1,33 @@
+extends includes/base
+
+block title
+  title= title
+
+block css
+  link(rel='stylesheet', href='/stylesheets/admin.css')
+  <!--[if lt IE 9]>
+  link(rel='stylesheet', href='/stylesheets/ie.css')
+  <![endif]-->
+
+block page 
+  div.page
+    include includes/header
+    .container
+      .content
+        h2 商务合作信息： #{message}
+        p.total 共有#{cooperations.length}条记录
+        table
+          thead
+            th 提交时间
+            th 姓名
+            th 联系电话
+            th.c-company-name 公司名称
+            th 操作
+          each item in cooperations
+            tr
+              td #{moment(item.meta.createAt).format('YYYY-MM-DD H:m')}
+              td #{item.name}
+              td #{item.mobile}
+              td #{item.company} 
+              td
+                button.btn.btn-danger 删除

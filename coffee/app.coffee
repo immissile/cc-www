@@ -1,4 +1,3 @@
-
 ###
 Module dependencies.
 App Interface
@@ -7,12 +6,22 @@ App Interface
 express = require("express")
 http = require("http")
 path = require("path")
+mongoose = require("mongoose")
+Cooperation = require("./models/cooperation")
 app = express()
+
+# init mongo
+mongoose.connect('mongodb://127.0.0.1:27017/imooc')
+
+access = require("./access")
 
 # all environments
 app.set "port", process.env.PORT or 3000
 app.set "views", path.join(__dirname, "views")
 app.set "view engine", "jade"
+app.use(express.bodyParser())
+app.use(express.cookieParser('Authentication Tutorial '))
+app.use(express.session())
 
 # compress html or not
 app.configure "development", ->
@@ -26,6 +35,19 @@ app.use express.logger("dev")
 app.use express.json()
 app.use express.urlencoded()
 app.use express.methodOverride()
+
+app.use (req, res, next) ->
+  err = req.session.error
+  msg = req.session.success
+
+  delete req.session.error
+  delete req.session.success
+
+  res.locals.user = req.session.user
+  res.locals.error = err
+
+  next()
+
 app.use app.router
 app.use(
   require("less-middleware")(
@@ -42,10 +64,11 @@ app.use express.static(path.join(__dirname, "public"))
 # development only
 app.use express.errorHandler()  if "development" is app.get("env")
 
-
 routes = require("./routes")
 detail = require("./routes/detail")
 joinUs = require("./routes/joinUs")
+cooperation = require("./routes/cooperation")
+admin = require("./routes/admin")
 
 # 首页
 app.get "/", routes.index
@@ -55,9 +78,21 @@ app.get /^\/page-*?(?:\/(\d+)(?:\.\.(\d+))?)?/, routes.index
 # detail 
 #app.get "/detail*?", detail.list
 
+# 商务合作
+app.get "/cooperation", cooperation.index
+app.post "/cooperation/new", cooperation.new
+app.get "/cooperation/succ", cooperation.succ
+
+# 管理后台
+app.get "/admin", access.requiredAuthentication, admin.index
+app.get "/admin/login", admin.login
+app.post "/admin/login", admin.postLogin
+app.get "/admin/logout", admin.logout
+app.get "/admin/setup", admin.setup
+app.post "/admin/setup", access.userExist, admin.postSetup
+
 #joinUs
 app.get "/joinUs.html", joinUs.index
 
 http.createServer(app).listen app.get("port"), ->
   console.log "Express server listening on port " + app.get("port")
-
