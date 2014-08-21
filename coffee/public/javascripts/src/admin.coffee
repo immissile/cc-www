@@ -1,10 +1,7 @@
 define (require) ->
 
   $ = require 'jquery'
-  window.$ = $
-
   window.CC = {}
-
 
   $("form").find("input").blur ->
     if $(@).val() != ""
@@ -41,3 +38,17 @@ define (require) ->
     else
       pass $password
 
+
+  $("button.btn-del").click ->
+    id = $(@).data "id"
+    $tr = $(@).parent().parent()
+
+    if confirm "确认删除？"
+      $.ajax
+        type: "DELETE"
+        url: "/admin/cooperation?id=" + id
+      .done (results) ->
+        if results.success == 1
+          if $tr.length > 0
+            $tr.fadeOut ->
+              $tr.remove()

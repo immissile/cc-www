@@ -1,8 +1,12 @@
 @import "./common";
+@import "./libs/bootstrap/bootstrap";
 
+.page {
+  height: auto;
+}
 a {
   color: #248DC9;
-  text-decoration: none;
+  text-decoration: none!important;
 }
 .center {
   text-align: center;
@@ -23,10 +27,68 @@ ul li {
   list-style: none;
 }
 
+.s-header {
+  .inner {
+    height: auto;
+    img.logo {
+      display: inline-block;
+      height: 40px;
+    }
+  }
+  .bar-right.show-more {
+    top: 10px;
+    span, a {
+      font-size: 14px;
+    }
+    span {
+      cursor: default;
+    }
+  }
+}
+
+.nav.main-nav {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  //background: #FAFAFA;
+  padding-top: 20px;
+
+  .main-nav-in {
+    max-width: 1000px;
+    height: auto;
+    overflow: auto;
+    margin: 0 auto;
+    border-bottom: 1px #eee solid;
+  }
+
+  ul li {
+    display: inline-block;
+    float: left;
+    line-height: auto;
+    margin-right: 20px;
+
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      border-bottom: 2px #fff solid;
+      color: #666;
+      &:hover {
+        color: #c43;
+        border-bottom: 2px #c43 solid;
+      }
+    }
+    &.active a {
+      color: #c43;
+      border-bottom: 2px #c43 solid;
+    }
+  }
+}
+
 .container {
   padding: 20px;
+  padding-top: 0;
   .content {
-    margin: 50px auto;
+    margin: 10px auto;
     max-width: 1000px;
     h2 {
       font-size: 15px;
@@ -55,15 +117,22 @@ ul li {
       th {
         text-align: left;
         &:first-child {
+          width: 60px;
+          text-align: center;
+        }
+        &.c-time {
           width: 20%;
         }
         &.c-company-name {
-          width: 40%;
+          width: 35%;
         }
         &:last-child {
           width: 80px;
           text-align: center;
         }
+      }
+      tr td:first-child {
+        text-align: center;
       }
       tr td:last-child {
         text-align: center;

@@ -45,6 +45,11 @@ section .sub-page {
     -vendor-animation-duration: 3s;
     -vendor-animation-delay: 2s;
     -vendor-animation-iteration-count: infinite;
+
+    h2 {
+      margin: 0;
+      padding-bottom: 10px;
+    }
   }
 
   h2 {
@@ -644,4 +649,28 @@ section .sub-page {
 
 .ie-icon {
   display: none;
+}
+
+.btn {
+  text-decoration: none;
+  border: 1px #ccc solid;
+  border-radius: 4px;
+  padding: 8px 15px;
+  background-color: #fff;
+  color: #333;
+  &:hover {
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    color: #333;
+  }
+  &.btn-super {
+    padding: 10px 20px;
+    vertical-align: middle;
+    margin-top: 10px;
+  }
+  img {
+    display: inline-block;
+    width: 16px;
+    vertical-align: middle;
+  }
 }

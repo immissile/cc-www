@@ -4,6 +4,8 @@ seajs.config
   alias:
     'jquery': 'jquery/jquery/1.10.1/jquery'
     '$': 'jquery/jquery/1.10.1/jquery'
+    'bootstrap': 'gallery/bootstrap/3.0.0/bootstrap'
+    'wysiwyg': 'libs/bootstrap-wysiwyg'
     'backbone': 'gallery/backbone/1.1.0/backbone'
     'underscore': 'gallery/underscore/1.5.2/underscore'
     'mustache': 'marketing/mustache/0.7.2/mustache'

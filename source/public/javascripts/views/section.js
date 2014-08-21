@@ -2,6 +2,7 @@
   define(function(require, exports, module) {
     var $, Backbone, RES, ThisView, Util, tpl, _;
     $ = require('jquery');
+    window.$ = $;
     Backbone = require('backbone');
     _ = require('underscore');
     Util = require('../common/util');
@@ -24,9 +25,17 @@
         return this.$el.height($(window).height() - w);
       },
       render: function() {
-        var container;
+        var container, self;
+        self = this;
         container = _.template(tpl);
-        return this.$el.html(container);
+        this.$el.html(container);
+        return setTimeout(function() {
+          var $homeSlider;
+          $homeSlider = $(".home-slider");
+          return $homeSlider.css({
+            top: (self.$el.height() - $(".footer").height() - $homeSlider.height()) / 2
+          });
+        }, 5);
       }
     });
     return module.exports = ThisView;

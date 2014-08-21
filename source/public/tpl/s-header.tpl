@@ -4,7 +4,11 @@
     <span class="arrow-text">首页</span>
   </div>
   <div class="bar-right show-more">
-    <span>更多</span>
+    <span class="btn-s btn-xx">
+      <img src="/images/hands-48.png">
+      <a href="/cooperation">商务合作</a>
+    </span>
+    <span class="btn-more">更多</span>
   </div>
   <!--
   <img src="<%= logo %>" class="logo">

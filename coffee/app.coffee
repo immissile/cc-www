@@ -85,11 +85,13 @@ app.get "/cooperation/succ", cooperation.succ
 
 # 管理后台
 app.get "/admin", access.requiredAuthentication, admin.index
+app.delete "/admin/cooperation", access.requiredAuthentication, admin.deleteCooperation
 app.get "/admin/login", admin.login
 app.post "/admin/login", admin.postLogin
 app.get "/admin/logout", admin.logout
 app.get "/admin/setup", admin.setup
 app.post "/admin/setup", access.userExist, admin.postSetup
+app.get "/admin/hr", access.requiredAuthentication, admin.hr
 
 #joinUs
 app.get "/joinUs.html", joinUs.index

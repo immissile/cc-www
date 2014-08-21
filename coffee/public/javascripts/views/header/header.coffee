@@ -19,7 +19,7 @@ define (require, exports, module) ->
 
     events:
       'click .logo': 'goHome'
-      'click .show-more': 'more'
+      'click .show-more .btn-more': 'more'
 
     render: ->
       html = _.template tpl, {logo: RES.landing}

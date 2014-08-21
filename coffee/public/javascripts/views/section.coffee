@@ -1,6 +1,7 @@
 define (require, exports, module) ->
   
   $ = require 'jquery'
+  window.$ = $
   Backbone = require 'backbone'
   _ = require 'underscore'
 
@@ -23,11 +24,17 @@ define (require, exports, module) ->
 
     resize: ->
       w = $('.header').height() + $('.footer').height()
-      this.$el.height $(window).height() - w
+      @$el.height $(window).height() - w
 
     render: ->
-      #@$el.css "background-image", "url(#{RES.home})"
+      self = @
       container = _.template tpl
-      this.$el.html container
+      @$el.html container
+
+      setTimeout ->
+        $homeSlider = $(".home-slider")
+        $homeSlider.css
+          top: (self.$el.height() - $(".footer").height() - $homeSlider.height()) / 2
+      , 5
 
   module.exports = ThisView

@@ -16,6 +16,8 @@ exports.index = (req, res) ->
     
     res.render "admin/index",
       title: "管理后台 - 云中信"
+      active:
+        cooperation: true
       cooperations: cooperations
       moment: moment
 
@@ -24,9 +26,8 @@ exports.setup = (req, res) ->
     res.redirect "/"
   else
     User.findOne {}, (err, user) ->
-      console.log "#############", user
       if user
-        req.session.error = "无setup权限"
+        req.session.error = "你没有setup权限"
         res.redirect "/admin/login"
       else
         res.render "admin/setup"
@@ -77,3 +78,23 @@ exports.logout = (req, res) ->
 
 exports.signup = (req, res) ->
   res.render "admin/sign"
+
+exports.deleteCooperation = (req, res) ->
+  id = req.query.id
+  if id
+    Cooperation.remove
+      _id: id
+    , (err, user) ->
+      if err
+        console.log err
+      else
+        res.json
+          success: 1
+  
+
+exports.hr = (req, res) ->
+  res.render "admin/hr",
+    title: "招聘相关"
+    active:
+      hr: true
+    cooperations: []

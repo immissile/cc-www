@@ -98,6 +98,8 @@ App Interface
 
   app.get("/admin", access.requiredAuthentication, admin.index);
 
+  app["delete"]("/admin/cooperation", access.requiredAuthentication, admin.deleteCooperation);
+
   app.get("/admin/login", admin.login);
 
   app.post("/admin/login", admin.postLogin);
@@ -107,6 +109,8 @@ App Interface
   app.get("/admin/setup", admin.setup);
 
   app.post("/admin/setup", access.userExist, admin.postSetup);
+
+  app.get("/admin/hr", access.requiredAuthentication, admin.hr);
 
   app.get("/joinUs.html", joinUs.index);
 

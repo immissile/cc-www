@@ -21,6 +21,9 @@
       }
       return res.render("admin/index", {
         title: "管理后台 - 云中信",
+        active: {
+          cooperation: true
+        },
         cooperations: cooperations,
         moment: moment
       });
@@ -32,9 +35,8 @@
       return res.redirect("/");
     } else {
       return User.findOne({}, function(err, user) {
-        console.log("#############", user);
         if (user) {
-          req.session.error = "无setup权限";
+          req.session.error = "你没有setup权限";
           return res.redirect("/admin/login");
         } else {
           return res.render("admin/setup");
@@ -108,6 +110,34 @@
 
   exports.signup = function(req, res) {
     return res.render("admin/sign");
+  };
+
+  exports.deleteCooperation = function(req, res) {
+    var id;
+    id = req.query.id;
+    if (id) {
+      return Cooperation.remove({
+        _id: id
+      }, function(err, user) {
+        if (err) {
+          return console.log(err);
+        } else {
+          return res.json({
+            success: 1
+          });
+        }
+      });
+    }
+  };
+
+  exports.hr = function(req, res) {
+    return res.render("admin/hr", {
+      title: "招聘相关",
+      active: {
+        hr: true
+      },
+      cooperations: []
+    });
   };
 
 }).call(this);

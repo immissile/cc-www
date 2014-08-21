@@ -15,7 +15,7 @@
       events: {
         'click .logo': 'goHome',
         'click .go-back': 'back',
-        'click .show-more': 'more'
+        'click .show-more .btn-more': 'more'
       },
       render: function() {
         var html;
