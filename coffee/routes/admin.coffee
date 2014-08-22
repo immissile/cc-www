@@ -15,7 +15,7 @@ exports.index = (req, res) ->
       console.log err
     
     res.render "admin/index",
-      title: "管理后台 - 云中信"
+      title: "管理后台 - 云信"
       active:
         cooperation: true
       cooperations: cooperations
@@ -59,7 +59,7 @@ exports.postSetup = (req, res) ->
 
 exports.login = (req, res) ->
   res.render "admin/login",
-    title: "登陆 - 云中信"
+    title: "登陆 - 云信"
 
 exports.postLogin = (req, res) ->
   access.authenticate req.body.name, req.body.password, (err, user) ->

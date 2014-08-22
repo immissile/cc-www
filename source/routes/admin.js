@@ -20,7 +20,7 @@
         console.log(err);
       }
       return res.render("admin/index", {
-        title: "管理后台 - 云中信",
+        title: "管理后台 - 云信",
         active: {
           cooperation: true
         },
@@ -83,7 +83,7 @@
 
   exports.login = function(req, res) {
     return res.render("admin/login", {
-      title: "登陆 - 云中信"
+      title: "登陆 - 云信"
     });
   };
 

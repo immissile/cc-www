@@ -3,7 +3,7 @@ Cooperation = require("../models/cooperation")
 
 exports.index = (req, res) ->
   res.render "cooperation",
-    title: "商务合作 - 云中信"
+    title: "商务合作 - 云信"
 
 exports.succ = (req, res) ->
   res.render "cooperation_succ",

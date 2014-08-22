@@ -5,7 +5,7 @@
 
   exports.index = function(req, res) {
     return res.render("cooperation", {
-      title: "商务合作 - 云中信"
+      title: "商务合作 - 云信"
     });
   };
 
