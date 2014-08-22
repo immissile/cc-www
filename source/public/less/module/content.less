@@ -664,13 +664,22 @@ section .sub-page {
     color: #333;
   }
   &.btn-super {
-    padding: 10px 20px;
-    vertical-align: middle;
+    padding: 15px 30px;
+    vertical-align: bottom;
     margin-top: 10px;
+    background: #d15b47;
+    border: 1px #d15b47 solid;
+    color: #eee;
+    font-size: 18px;
+    .animate-in();
+    &:hover {
+      background: #b74635;
+      color: #fff;
+    }
   }
   img {
     display: inline-block;
-    width: 16px;
+    width: 20px;
     vertical-align: middle;
   }
 }
