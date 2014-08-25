@@ -69,6 +69,7 @@ detail = require("./routes/detail")
 joinUs = require("./routes/joinUs")
 cooperation = require("./routes/cooperation")
 admin = require("./routes/admin")
+api = require("./routes/api")
 
 # 首页
 app.get "/", routes.index
@@ -92,6 +93,10 @@ app.get "/admin/logout", admin.logout
 app.get "/admin/setup", admin.setup
 app.post "/admin/setup", access.userExist, admin.postSetup
 app.get "/admin/hr", access.requiredAuthentication, admin.hr
+app.post "/admin/hr", access.requiredAuthentication, admin.postHr
+
+# api
+app.get "/api/recruitment", api.recruitment
 
 #joinUs
 app.get "/joinUs.html", joinUs.index

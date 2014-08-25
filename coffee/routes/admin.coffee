@@ -5,6 +5,7 @@ hash = require('../pass').hash
 
 Cooperation = require("../models/cooperation")
 User = require("../models/user")
+Hr = require("../models/hr")
 
 exports.index = (req, res) ->
   if !req.session.user
@@ -58,16 +59,26 @@ exports.postSetup = (req, res) ->
             res.redirect "/admin"
 
 exports.login = (req, res) ->
+  from = req.query.from
+  if from != "undefined"
+    from = "?from="+from
+  else
+    from = ""
   res.render "admin/login",
     title: "登陆 - 云信"
+    from: from
 
 exports.postLogin = (req, res) ->
+  from = req.query.from
   access.authenticate req.body.name, req.body.password, (err, user) ->
     if user
       req.session.regenerate ->
         req.session.user = user
         req.session.success = "Login succ"
-        res.redirect "/admin"
+        if from != "undefined"
+          res.redirect from
+        else
+          res.redirect "/admin"
     else
       req.session.error = "账号或密码错误"
       res.redirect "/admin/login"
@@ -93,8 +104,45 @@ exports.deleteCooperation = (req, res) ->
   
 
 exports.hr = (req, res) ->
-  res.render "admin/hr",
-    title: "招聘相关"
-    active:
-      hr: true
-    cooperations: []
+  Hr.findIt (err, hr) ->
+    if err
+      console.log err
+    else
+      if hr == null
+        hr = []
+        btnText = "保存"
+      else
+        btnText = "更新"
+      res.render "admin/hr",
+        title: "招聘相关"
+        active:
+          hr: true
+        cooperations: []
+        hr: hr
+        btnText: btnText
+
+exports.postHr = (req, res) ->
+  id = req.body._id
+  content = req.body.content
+  if id == "undefined"
+    _hr = new Hr
+      content: content
+
+    _hr.save (err, hr) ->
+      if err
+        console.log err
+      res.redirect "/admin/hr"
+  else
+    conditions =
+      _id: id
+    update =
+      $set:
+        content: content
+    options =
+      multi: true
+    
+    Hr.update conditions, update, options, (err, hr) ->
+      if err
+        console.log err
+      else
+        res.redirect "/admin/hr"

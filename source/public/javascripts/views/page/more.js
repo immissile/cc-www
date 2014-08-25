@@ -71,6 +71,19 @@
             _tpl = tpl_joinus;
         }
         this.$el.append(_tpl);
+        if (view === "joinus") {
+          $.ajax({
+            url: '/api/recruitment'
+          }).done(function(o) {
+            return $(".hr-content").html(o.data.content);
+          }).error(function(err) {
+            var error;
+            error = "抱歉~ 服务器出了点小问题，系统已自动给管理员发了警告信息，正在处理中";
+            return $(".hr-content").html(error).css({
+              color: "#c43"
+            });
+          });
+        }
         $('.detail-page').addClass('animated moveInRight');
         $('button.hide-detail').hover(function() {
           return $(this).addClass('animated pulse');

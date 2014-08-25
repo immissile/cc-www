@@ -5,7 +5,7 @@ App Interface
 
 
 (function() {
-  var Cooperation, access, admin, app, cooperation, detail, express, http, joinUs, mongoose, path, routes;
+  var Cooperation, access, admin, api, app, cooperation, detail, express, http, joinUs, mongoose, path, routes;
 
   express = require("express");
 
@@ -86,6 +86,8 @@ App Interface
 
   admin = require("./routes/admin");
 
+  api = require("./routes/api");
+
   app.get("/", routes.index);
 
   app.get(/^\/page-*?(?:\/(\d+)(?:\.\.(\d+))?)?/, routes.index);
@@ -111,6 +113,10 @@ App Interface
   app.post("/admin/setup", access.userExist, admin.postSetup);
 
   app.get("/admin/hr", access.requiredAuthentication, admin.hr);
+
+  app.post("/admin/hr", access.requiredAuthentication, admin.postHr);
+
+  app.get("/api/recruitment", api.recruitment);
 
   app.get("/joinUs.html", joinUs.index);
 

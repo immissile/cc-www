@@ -19,7 +19,6 @@
               return fn(err);
             }
             if (hash === user.hash) {
-              console.log("@@@@#### hash == user.hash");
               return fn(null, user);
             }
             return fn(new Error('invalid password' + hash + ' #### ' + user.hash));
@@ -34,7 +33,7 @@
         return next();
       } else {
         req.session.error = "请先登陆";
-        return res.redirect("/admin/login");
+        return res.redirect("/admin/login?from=" + req.url);
       }
     },
     userExist: function(req, res, next) {

@@ -65,6 +65,17 @@ define (require, exports, module) ->
         when 'joinus'
         then _tpl = tpl_joinus
       @$el.append _tpl
+      if view == "joinus"
+        $.ajax
+          url: '/api/recruitment'
+        .done (o) ->
+          $(".hr-content").html o.data.content
+        .error (err) ->
+          error = "抱歉~ 服务器出了点小问题，系统已自动给管理员发了警告信息，正在处理中"
+          $(".hr-content").html(error)
+          .css
+            color: "#c43"
+
       $('.detail-page').addClass 'animated moveInRight'
 
       $('button.hide-detail').hover ->
