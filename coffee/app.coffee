@@ -67,6 +67,7 @@ app.use express.errorHandler()  if "development" is app.get("env")
 routes = require("./routes")
 detail = require("./routes/detail")
 joinUs = require("./routes/joinUs")
+baidu = require("./routes/baidu")
 cooperation = require("./routes/cooperation")
 admin = require("./routes/admin")
 api = require("./routes/api")
@@ -100,6 +101,8 @@ app.get "/api/recruitment", api.recruitment
 
 #joinUs
 app.get "/joinUs.html", joinUs.index
+
+app.get "/baidu_verify_XSxZPZu2WR.html", baidu.index
 
 http.createServer(app).listen app.get("port"), ->
   console.log "Express server listening on port " + app.get("port")

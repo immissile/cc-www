@@ -5,7 +5,7 @@ App Interface
 
 
 (function() {
-  var Cooperation, access, admin, api, app, cooperation, detail, express, http, joinUs, mongoose, path, routes;
+  var Cooperation, access, admin, api, app, baidu, cooperation, detail, express, http, joinUs, mongoose, path, routes;
 
   express = require("express");
 
@@ -82,6 +82,8 @@ App Interface
 
   joinUs = require("./routes/joinUs");
 
+  baidu = require("./routes/baidu");
+
   cooperation = require("./routes/cooperation");
 
   admin = require("./routes/admin");
@@ -119,6 +121,8 @@ App Interface
   app.get("/api/recruitment", api.recruitment);
 
   app.get("/joinUs.html", joinUs.index);
+
+  app.get("/baidu_verify_XSxZPZu2WR.html", baidu.index);
 
   http.createServer(app).listen(app.get("port"), function() {
     return console.log("Express server listening on port " + app.get("port"));
